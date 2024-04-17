@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {font-family: 'Montserrat';}
+
+body, html {
+    cursor: default !important;
+}
+
+a {
+    text-decoration: none;
+    color: #40837d !important;
+    font-weight: 500;
+    
+}
+
+a:hover {
+    color: #3c057a !important;
+    text-decoration: none;
+}
+
+ul {list-style-type: none;}
+
+hr {
+    margin-top: 0px;
+    margin-bottom: 5%;
+}
+
+.st-emotion-cache-1v0mbdj {
+    width: 100%; /* Defina a largura total */
+    height: 100%; /* Defina a altura total */
+    position: relative; /* Define o posicionamento fixo */
+    top: 0; /* Alinhe o topo */
+    left: 0; /* Alinhe à esquerda */
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Centralize horizontalmente */
+    align-items: center; /* Centralize verticalmente */
+    pointer-events: none; /* Impede que o elemento reaja a eventos de clique */
+}
+
+.st-emotion-cache-1v0mbdj img {
+    width: 200px; /* Modifique a largura conforme necessário */
+}
+
+.st-emotion-cache-1rja0mm {
+    display: none;
+}
+
+.stPlotlyChart path {
+    pointer-events: none !important;
+   
+}
+
+.stFullScreenFrame path {
+    pointer-events: none !important;
+
+}
+
+.drag { /* Desativa todas as interações com o gráfico PLOTLY*/
+    pointer-events: none !important;
+  }
+
+.modebar-container { /* Desativa a barra de menus que o plotly deixa no gráfico*/
+    display: none;
+}
+
+.st-emotion-cache-1pyb3s0 { /* Esconde o scroll do container na logo*/
+    overflow: hidden;
+}
+
+.st-emotion-cache-2wmrxa  { /* Esconde o botão de botar o gráfico em fullscreen*/
+    display: none !important;
+    visibility: none !important;
+    pointer-events: none !important;
+}
+
+
+
+/* DECRACATED WAYS OF DISABLING CURSOR INTERACTION IN PLOTLY, CAN USE JUST .drag
+
+.draglayer {
+    cursor: auto !important; 
+    pointer-events: none !important;
+}
+
+.ndrag {
+    pointer-events: none !important;
+  }
+
+.nwdrag {
+    pointer-events: none !important;
+
+}
+
+.swdrag {
+    pointer-events: none !important;
+
+}
+.wdrag {
+    pointer-events: none !important;
+}
+
+.ewdrag {
+    pointer-events: none !important;
+}
+
+.sedrag {
+    pointer-events: none !important;
+}
+
+.nedrag {
+    pointer-events: none !important;
+}
+*/
+
