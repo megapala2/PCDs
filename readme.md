@@ -22,29 +22,29 @@ Esse projeto faz uso extenso de CSS para modificar algumas funcionalidades do st
 
 1. Trocar a fonte do site
 
-    Copy code
-
-    `@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    ```
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 
        {font-family: 'Montserrat';}
+    ```
 
 2. Desativar todas as interações com o gráfico PLOTLY
 
-    Copy code
 
-    `.drag { /* */
+    ```
+    .drag { /* */
             pointer-events: none !important;
         }
+    ```
 
 3. Desativar a barra de menus que o plotly deixa no gráfico
 
-    Copy code
-
-    `.modebar-container { 
+    ```
+    .modebar-container { 
           display: none;
             }
-
+    ```
 
 Pré-Requisitos
 --------------
@@ -58,25 +58,29 @@ Instalação e Uso
 
 1.  Clone o repositório:
     
-    bashCopy code
     
-    `git clone https://github.com/seu_usuario/seu_repositorio.git`
+    ```
+    git clone https://github.com/seu_usuario/seu_repositorio.git`
+    ```
     
 2.  Instale as dependências:
     
-    Copy code
     
-    `pip install -r requirements.txt`
+    ```
+    pip install -r requirements.txt`
+    ```
     
 3.  Configure as variáveis de ambiente:
     
-    *   Crie um arquivo `.env` na raiz do projeto.
-    *   Defina as variáveis de ambiente necessárias no arquivo `.env` (consulte o arquivo `.env.example` para referência).
+    *   Crie um arquivo `.env` na raiz do projeto com as chaves de API do google sheets caso prefira fazer o método original
+    
+
 4.  Execute o aplicativo Streamlit:
     
-    arduinoCopy code
     
-    `streamlit run main.py`
+    ```
+    streamlit run main.py`
+    ```
     
 5.  Acesse o aplicativo através do navegador web utilizando o link gerado pelo Streamlit.
     
