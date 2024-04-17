@@ -74,6 +74,9 @@ hr {
     pointer-events: none !important;
 }
 
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
 
 
 /* DECRACATED WAYS OF DISABLING CURSOR INTERACTION IN PLOTLY, CAN USE JUST .drag
