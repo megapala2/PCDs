@@ -201,7 +201,7 @@ class gdoc:
         return creds
 
 
-    @st.cache_data
+    @st.cache_data(ttl='1d')
     def client_data():
         creds = gdoc.credential()
         gs = gspread.authorize(creds)
@@ -297,6 +297,7 @@ class stpage:
 
 class cleaner:
     
+    @st.cache_data(ttl='1d')
     def df_treatment():
 
         df = gdoc.client_data()
