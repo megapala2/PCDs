@@ -60,7 +60,7 @@ Instalação e Uso
     
     
     ```
-    git clone https://github.com/seu_usuario/seu_repositorio.git`
+    git clone https://github.com/megapala2/PCDs`
     ```
     
 2.  Instale as dependências:
