@@ -8,8 +8,7 @@ import requests
 import plotly.express as px
 from unidecode import unidecode
 import re
-import geopandas as gpd
-import pydeck as pdk
+
 
 load_dotenv()
 

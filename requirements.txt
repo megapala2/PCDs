@@ -1,0 +1,6 @@
+unidecode
+plotly
+gspread
+google-auth
+pandas
+streamlit
