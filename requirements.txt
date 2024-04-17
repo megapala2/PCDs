@@ -4,3 +4,4 @@ gspread
 google-auth
 pandas
 streamlit
+python-dotenv
