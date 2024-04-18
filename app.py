@@ -291,9 +291,10 @@ class stpage:
     def expand_df(df):
     
         with st.expander('Base de currículos'):
+            st.warning('Os dados mostrados são limitados para ficarem de acordo com a LGPD')
             st.warning('Recrutador! Entre em contato com a dona do projeto para ter acesso a base completa! (https://www.linkedin.com/in/isabelaespezim/)')
             st.info(f'Total de currículos: {len(df)}')
-            st.dataframe(df, use_container_width=True)
+            st.data_editor(df, use_container_width=True, hide_index=True, disabled=True, column_order=("Idade", "UF", "Cargo", "Área de interesse", "Formação", "Modelo de trabalho"))
 
 class cleaner:
     
@@ -356,8 +357,12 @@ class cleaner:
             else:
                 return "Out of range"
         elif isinstance(age, str) and len(age) < 12:
-            age = int(''.join(re.findall(r'\d+', age)))
-            return cleaner.categorize_age(age)
+            try:
+                age = int(''.join(re.findall(r'\d+', age)))
+                return cleaner.categorize_age(age)
+            except (TypeError, ValueError):
+                age = 'NA'
+                return age
         else:
            
             return age
