@@ -266,14 +266,14 @@ class stpage:
 
     # Multiselects na primeira coluna
         with col1:
-            st.session_state.UF = st.multiselect(label='UF', options=UF.values())
-            st.session_state.ensino = st.multiselect(label='🎓', options=FORMACAO)
-            st.session_state.interesse = st.multiselect(label='🤔', options=INTERESSE)
+            st.session_state.UF = st.multiselect(label='UF 🏙️', options=UF.values())
+            st.session_state.ensino = st.multiselect(label='Ensino 🎓', options=FORMACAO)
+            st.session_state.interesse = st.multiselect(label='Interesse 🤔', options=INTERESSE)
 
         # Multiselects na segunda coluna
         with col2:
-            st.session_state.trabalho = st.multiselect(label='💼', options=TRABALHO)
-            st.session_state.cargos = st.multiselect(label='👔', options=CARGOS)
+            st.session_state.trabalho = st.multiselect(label='Trabalho 💼', options=TRABALHO)
+            st.session_state.cargos = st.multiselect(label='Cargo 👔', options=CARGOS)
             
         
         with side_container3.popover('Envie seu currículo!', use_container_width=True):
@@ -432,33 +432,33 @@ class dashboard:
         dashpop_coluna1, dashpop_coluna2, dashpop_coluna3, dashpop_coluna4, dashpop_coluna5, dashpop_coluna6, dashpop_coluna7, dashpop_coluna8, dashpop_coluna9 = container_uf.columns(9)
         
 
-        with dashpop_coluna1.popover('Cidade', use_container_width=True):
+        with dashpop_coluna1.popover('Cidade  --- 🏙️', use_container_width=True):
              dashboard.pop_plot(df,  x='count', y='Cidade', orientation='h')
 
-        with dashpop_coluna2.popover('Bairro', use_container_width=True):
+        with dashpop_coluna2.popover('Bairro  --- 🏘️', use_container_width=True):
              dashboard.pop_plot(df,  x='count', y='Bairro', orientation='h')
         
-        with dashpop_coluna3.popover('Etnia', use_container_width=True):
+        with dashpop_coluna3.popover('Etnia  ----- 🌍', use_container_width=True):
              dashboard.pop_plot_pizza(df,  x='count', y='Etnia', orientation='h')
         
-        with dashpop_coluna4.popover('♿', use_container_width=True):
+        with dashpop_coluna4.popover('Deficiência ♿', use_container_width=True):
              dashboard.pop_plot(df,  x='count', y='Deficiência', orientation='h')
 
-        with dashpop_coluna5.popover('🎓', use_container_width=True):
+        with dashpop_coluna5.popover('Formação 🎓', use_container_width=True):
             dashboard.pop_plot(df,  x='count', y='Formação', orientation='h')
         
-        with dashpop_coluna6.popover('💵', use_container_width=True):
+        with dashpop_coluna6.popover('Pretensão 💵', use_container_width=True):
             dashboard.pop_plot(df,  x='count', y='Expectativa Salarial', orientation='h')
         
-        with dashpop_coluna7.popover('👔', use_container_width=True):
+        with dashpop_coluna7.popover('Cargo Atual 👔', use_container_width=True):
             cargo= pd.DataFrame(newdf.contar_valores(df, 'Cargo', CARGOS))
             dashboard.pop_plot(cargo,  x='Contagem', y='Valor', orientation='h', news=0)
         
-        with dashpop_coluna8.popover('💼', use_container_width=True):
+        with dashpop_coluna8.popover('Modelo Trab 💼', use_container_width=True):
             modelo= pd.DataFrame(newdf.contar_valores(df, 'Modelo de trabalho', TRABALHO))
             dashboard.pop_plot_pizza(modelo,  x='Contagem', y='Valor', orientation='h', news=0)
 
-        with dashpop_coluna9.popover('🤔', use_container_width=True):
+        with dashpop_coluna9.popover('Interesse 🤔', use_container_width=True):
             interesses= pd.DataFrame(newdf.contar_valores(df, 'Área de interesse', INTERESSE))
             dashboard.pop_plot(interesses,  x='Contagem', y='Valor', orientation='h', news=0, largest=1)
 
