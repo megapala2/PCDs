@@ -428,10 +428,10 @@ class dashboard:
         
         dash_coluna1, dash_coluna2 = container_dash.columns(2)
         container_uf = dash_coluna1.container(border=False)
-        container_ufr = dash_coluna2.container(border=False)
+        
 
-        dashpop_coluna1, dashpop_coluna2, dashpop_coluna3, dashpop_coluna4, dashpop_coluna5, dashpop_coluna6 = container_uf.columns(6)
-        dashpop_coluna7, dashpop_coluna8, dashpop_coluna9, dashpop_coluna10, dashpop_coluna11, dashpop_coluna12 = container_ufr.columns(6)
+        dashpop_coluna1, dashpop_coluna2, dashpop_coluna3, dashpop_coluna4, dashpop_coluna5, dashpop_coluna6, dashpop_coluna7, dashpop_coluna8, dashpop_coluna9 = container_uf.columns(9)
+        
 
         with dashpop_coluna1.popover('Cidade', use_container_width=True):
              dashboard.pop_plot(df,  x='count', y='Cidade', orientation='h')
