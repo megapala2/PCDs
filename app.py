@@ -428,10 +428,12 @@ class dashboard:
         
         container_uf = container_dash.container(border=False)
         container_uf2 = container_dash.container(border=False)
+        container_uf3 = container_dash.container(border=False)
         dash_coluna1, dash_coluna2 = container_dash.columns(2)
 
-        dashpop_coluna1, dashpop_coluna2, dashpop_coluna3, dashpop_coluna4, dashpop_coluna5 = container_uf.columns(5)
-        dashpop_coluna6, dashpop_coluna7, dashpop_coluna8, dashpop_coluna9, dashpop_coluna10 = container_uf2.columns(5)
+        dashpop_coluna1, dashpop_coluna2, dashpop_coluna3, dashpop_coluna4 = container_uf.columns(4)
+        dashpop_coluna5, dashpop_coluna6, dashpop_coluna7, dashpop_coluna8 = container_uf2.columns(4)
+        dashpop_coluna9, dashpop_coluna10, dashpop_coluna11, dashpop_coluna12, = container_uf3.columns(4)
 
         with dashpop_coluna1.popover('Cidade 🏙️', use_container_width=True):
              dashboard.pop_plot(df,  x='count', y='Cidade', orientation='h')
@@ -455,7 +457,7 @@ class dashboard:
             cargo= pd.DataFrame(newdf.contar_valores(df, 'Cargo', CARGOS))
             dashboard.pop_plot(cargo,  x='Contagem', y='Valor', orientation='h', news=0)
         
-        with dashpop_coluna8.popover('Modelo Trabalho 💼', use_container_width=True):
+        with dashpop_coluna8.popover('Trabalho 💼', use_container_width=True):
             modelo= pd.DataFrame(newdf.contar_valores(df, 'Modelo de trabalho', TRABALHO))
             dashboard.pop_plot_pizza(modelo,  x='Contagem', y='Valor', orientation='h', news=0)
 
