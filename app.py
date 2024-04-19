@@ -217,8 +217,9 @@ class stpage:
     def init():
         
         st.set_page_config(layout='wide', page_icon='♿', page_title='PCDs Online Brasil')
-        st.sidebar.markdown("<h1 style='text-align: center; color: Black;'>PCDs Online Brasil</h1>", unsafe_allow_html=True)
+        
         logo_container = st.sidebar.container(height=200, border=False)
+        st.sidebar.markdown("<h1 style='text-align: center; color: Black;'>PCDs Online Brasil</h1>", unsafe_allow_html=True)
 
         css_file='styles/main.css'
 
