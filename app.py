@@ -448,7 +448,7 @@ class dashboard:
             cargo= pd.DataFrame(newdf.contar_valores(df, 'Cargo', CARGOS))
             dashboard.pop_plot(cargo,  x='Contagem', y='Valor', orientation='h', news=0)
         
-        with dashpop_coluna8.popover('Trabalho 💼', use_container_width=True):
+        with dashpop_coluna8.popover('Modelo Trabalho 💼', use_container_width=True):
             modelo= pd.DataFrame(newdf.contar_valores(df, 'Modelo de trabalho', TRABALHO))
             dashboard.pop_plot_pizza(modelo,  x='Contagem', y='Valor', orientation='h', news=0)
 
