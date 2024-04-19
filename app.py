@@ -215,8 +215,9 @@ class gdoc:
 class stpage:
 
     def init():
-
+        
         st.set_page_config(layout='wide', page_icon='♿', page_title='PCDs Online Brasil')
+        st.sidebar.title('PCDs Online Brasil')
         logo_container = st.sidebar.container(height=200, border=False)
 
         css_file='styles/main.css'
