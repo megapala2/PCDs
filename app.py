@@ -241,12 +241,7 @@ class stpage:
 
         with side_container2:
            st.write('\n')
-           st.write('\n')
-           st.write('\n')
-           st.write('\n')
-           st.write('\n')
-           st.write('\n')
-           st.write('\n')
+       
            
            
        
