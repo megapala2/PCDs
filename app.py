@@ -272,7 +272,7 @@ class stpage:
         
         with side_container3.popover('Créditos desse projeto:', use_container_width=True):
             st.info('Administradora do projeto: https://www.linkedin.com/in/isabelaespezim/')
-            st.info('Criador desse dashboard: https://www.linkedin.com/in/thales-rudolph-b7511a16a/')
+            st.info('Criador desse dashboard: https://www.linkedin.com/in/thales-rudolph')
 
         
         
