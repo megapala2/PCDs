@@ -217,7 +217,7 @@ class stpage:
     def init():
         
         st.set_page_config(layout='wide', page_icon='♿', page_title='PCDs Online Brasil')
-        st.sidebar.title('PCDs Online Brasil')
+        st.sidebar.markdown("<h1 style='text-align: center; color: Black;'>PCDs Online Brasil</h1>", unsafe_allow_html=True)
         logo_container = st.sidebar.container(height=200, border=False)
 
         css_file='styles/main.css'
@@ -240,12 +240,7 @@ class stpage:
         side_container2 = st.sidebar.container(border=False)
         side_container3 = st.sidebar.container(border=True)
 
-        with side_container2:
-           st.write('\n')
-       
-           
-           
-       
+
         search_box = side_container.text_input('Procurar', key="searchBar", help=r'Você pode digitar qualquer termo que seja procurar os dados, exemplo: "SP", "AUXILIAR", etc ')
 
         with side_container.popover('Filtro avançado', use_container_width=True):
