@@ -247,16 +247,7 @@ class stpage:
            st.write('\n')
            st.write('\n')
            st.write('\n')
-           st.write('\n')
-           st.write('\n')
-           st.write('\n')
-           st.write('\n')
-           st.write('\n')
-           st.write('\n')
-           st.write('\n')
-           st.write('\n')
-           st.write('\n')
-           st.write('\n')
+           
            
        
         search_box = side_container.text_input('Procurar', key="searchBar", help=r'Você pode digitar qualquer termo que seja procurar os dados, exemplo: "SP", "AUXILIAR", etc ')
@@ -272,7 +263,7 @@ class stpage:
 
         # Multiselects na segunda coluna
         with col2:
-            st.session_state.trabalho = st.multiselect(label='Trabalho 💼', options=TRABALHO)
+            st.session_state.trabalho = st.multiselect(label='Modelo Trabalho 💼', options=TRABALHO)
             st.session_state.cargos = st.multiselect(label='Cargo 👔', options=CARGOS)
             
         
@@ -280,7 +271,7 @@ class stpage:
             st.info('https://docs.google.com/forms/d/e/1FAIpQLSdh8hyiSDKGIxyHKxV5y6Jp3hXS-PE0AouDArg_ntIkfYyH0A/viewform?fbzx=1835398047016580018')
         
         with side_container3.popover('Créditos desse projeto:', use_container_width=True):
-            st.info('Criadora do projeto: https://www.linkedin.com/in/isabelaespezim/')
+            st.info('Administradora do projeto: https://www.linkedin.com/in/isabelaespezim/')
             st.info('Criador desse dashboard: https://www.linkedin.com/in/thales-rudolph-b7511a16a/')
 
         
@@ -290,9 +281,9 @@ class stpage:
     
     def expand_df(df):
     
-        with st.expander('Base de currículos'):
+        with st.expander('Base de currículos PCDs - 2024'):
             st.warning('Os dados mostrados são limitados para ficarem de acordo com a LGPD')
-            st.warning('Recrutador! Entre em contato com a dona do projeto para ter acesso a base completa! (https://www.linkedin.com/in/isabelaespezim/)')
+            st.warning('Recrutador! Entre em contato com a administradora do projeto para ter acesso a base completa: https://www.linkedin.com/in/isabelaespezim/')
             st.info(f'Total de currículos: {len(df)}')
             st.data_editor(df, use_container_width=True, hide_index=True, disabled=True, column_order=("Idade", "UF", "Cargo", "Área de interesse", "Formação", "Modelo de trabalho"))
 
