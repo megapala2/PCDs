@@ -32,7 +32,7 @@ CARGOS = [
     "Diretor/Vice Diretor",
     "Presidente/Ceo",
     "Autônomo",
-    "Não estou empregado no momento",
+    "Sem Emprego",
     "Assistente",
     "Estagiário",
     "Outros",
@@ -298,6 +298,7 @@ class cleaner:
 
             })
         
+        
         df = df.drop(columns=['CID', 'Possui alguma limitação?', 'Interesse', 'Gênero'])
         
         df['Cidade'] = df['Cidade'].apply(lambda x: x.strip() if isinstance(x, str) else x)
@@ -306,13 +307,17 @@ class cleaner:
         df['Cidade'] = df['Cidade'].apply(lambda x: unidecode(x).upper() if isinstance(x, str) else x)
         df['Bairro'] = df['Bairro'].apply(lambda x: unidecode(x).upper() if isinstance(x, str) else x)
         df['UF'] = df['UF'].apply(lambda x: unidecode(x).upper() if isinstance(x, str) else x)
+        
 
         
         df['Idade'] = df['Idade'].apply(lambda x: cleaner.categorize_age(x))
         df['Idade'] = df['Idade'].apply(lambda x: x.strip() if isinstance(x, str) else x)
 
         
-        df['Deficiência'] = df['Deficiência'].replace({'Transtorno do Espectro Autista': 'Autismo'})
+        df['Deficiência'] = df['Deficiência'].replace({'Transtorno do Espectro Autista': 'Autista'})
+        df['Cargo'] = df['Cargo'].replace({'Não estou empregado no momento': 'Sem Emprego'})
+
+
         df['UF'] = df['UF'].replace(UF)
         
         return df
@@ -522,7 +527,7 @@ class dashboard:
         fig.update_xaxes(title_text='')
 
         
-        st.write(fig, use_container_width=True)
+        st.write(fig)
 
 def main():
 
